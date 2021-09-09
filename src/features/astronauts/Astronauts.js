@@ -6,6 +6,10 @@ function Astronauts() {
   const dispatch = useDispatch();
 
   const astronauts = useSelector((state) => state.astronauts.entities);
+  console.log(
+    "🚀 ~ file: Astronauts.js ~ line 9 ~ Astronauts ~ astronauts",
+    astronauts
+  );
 
   function handleClick() {
     // dispatch the action creator (see below!)
@@ -13,7 +17,7 @@ function Astronauts() {
   }
 
   const astronautsList = astronauts.map((astro) => (
-    <li key={astro.id}>{astro.name}</li>
+    <li key={astro.name}>{astro.name}</li>
   ));
 
   return (
